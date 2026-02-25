@@ -1,0 +1,207 @@
+.dashboard-header {
+    margin-bottom: 2rem;
+}
+
+.success-banner {
+    background-color: var(--status-green-bg);
+    color: var(--status-green);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    border: 1px solid rgba(67, 160, 71, 0.2);
+}
+
+.filters-card {
+    margin-bottom: 2rem;
+}
+
+.filters-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    z-index: 1;
+    /* Make sure it's above the input if input doesn't have bg */
+}
+
+/* Specific override for the search input to add padding for the icon */
+.search-bar .input-wrapper {
+    margin-bottom: 0;
+}
+
+.search-bar .input-field {
+    padding-left: 2.75rem;
+}
+
+.filters-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-icon {
+    color: var(--text-muted);
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .filters-content {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .search-bar {
+        flex: 1;
+    }
+
+    .filters-row {
+        flex: 2;
+    }
+
+    .filter-icon {
+        display: block;
+    }
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.catalog-card {
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.catalog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.catalog-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.catalog-title {
+    font-size: 1.25rem;
+    margin: 0 0 0.25rem 0;
+    color: var(--primary);
+}
+
+.catalog-farm {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.catalog-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    flex: 1;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.detail-label {
+    color: var(--text-muted);
+}
+
+.detail-value {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.catalog-tags {
+    margin-bottom: 1.25rem;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-muted);
+    background: var(--surface-color);
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--border-color);
+}
+
+/* Transaction Flow Modal */
+.transaction-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.transaction-summary {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+}
+
+.transaction-summary h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary);
+}
+
+.transaction-summary p {
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.reservation-notice {
+    background-color: var(--status-yellow-bg);
+    border: 1px solid rgba(251, 192, 45, 0.3);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.reservation-notice p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #8C6D00;
+    line-height: 1.4;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}

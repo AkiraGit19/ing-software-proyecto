@@ -1,0 +1,55 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-default {
+    background-color: var(--primary-light);
+    color: var(--primary-hover);
+}
+
+.badge-red {
+    background-color: var(--status-red-bg);
+    color: var(--status-red);
+}
+
+.badge-yellow {
+    background-color: var(--status-yellow-bg);
+    color: #B28900;
+    /* Darker yellow for text legibility */
+}
+
+.badge-green {
+    background-color: var(--status-green-bg);
+    color: var(--status-green);
+}
+
+/* Traffic Light Status */
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.status-red {
+    background-color: var(--status-red);
+    box-shadow: 0 0 4px var(--status-red);
+}
+
+.status-yellow {
+    background-color: var(--status-yellow);
+    box-shadow: 0 0 4px var(--status-yellow);
+}
+
+.status-green {
+    background-color: var(--status-green);
+    box-shadow: 0 0 4px var(--status-green);
+}

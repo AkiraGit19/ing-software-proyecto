@@ -1,0 +1,173 @@
+.app-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
+/* Sidebar (Desktop) */
+.app-sidebar {
+    display: none;
+    width: 250px;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-right: 1px solid var(--border-color);
+    background-color: var(--surface-color);
+    z-index: 10;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    color: var(--primary);
+}
+
+.brand-icon {
+    font-size: 1.5rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.nav-item:hover {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.nav-item.active {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-footer {
+    margin-top: auto;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-family: var(--font-family);
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.logout-btn:hover {
+    background-color: var(--status-red-bg);
+    color: var(--status-red);
+}
+
+/* Main Area */
+.app-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+}
+
+.mobile-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-header h2 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.content-area {
+    flex: 1;
+    padding: 1.5rem;
+    padding-bottom: 5rem;
+    /* Space for bottom nav */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Bottom Navigation (Mobile) */
+.mobile-bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.75rem 1rem;
+    padding-bottom: env(safe-area-inset-bottom, 0.75rem);
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+    z-index: 20;
+}
+
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.bottom-nav-item.active {
+    color: var(--primary);
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) {
+    .app-sidebar {
+        display: flex;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+
+    .mobile-bottom-nav {
+        display: none;
+    }
+
+    .content-area {
+        padding: 2rem;
+        padding-bottom: 2rem;
+    }
+}

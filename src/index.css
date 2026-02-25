@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-family: 'Inter', sans-serif;
+  
+  /* Brand Colors */
+  --primary: #4C7A20;
+  --primary-hover: #3E631A;
+  --primary-light: #E8F0E1;
+  
+  --secondary: #E8B428;
+  --secondary-hover: #D4A322;
+  
+  /* Semantic Colors (Surplus Status) */
+  --status-red: #E53935;
+  --status-yellow: #FBC02D;
+  --status-green: #43A047;
+  
+  --status-red-bg: #FFEBEE;
+  --status-yellow-bg: #FFFDE7;
+  --status-green-bg: #E8F5E9;
+
+  /* Neutrals */
+  --bg-color: #F4F7F2;
+  --surface-color: #FFFFFF;
+  --surface-glass: rgba(255, 255, 255, 0.85);
+  
+  --text-primary: #1A2E05;
+  --text-secondary: #5C704D;
+  --text-muted: #8B9B7F;
+  
+  --border-color: #DCE5D5;
+  
+  /* Shadows & Effects */
+  --shadow-sm: 0 1px 2px rgba(26, 46, 5, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(26, 46, 5, 0.1), 0 2px 4px -1px rgba(26, 46, 5, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(26, 46, 5, 0.1), 0 4px 6px -2px rgba(26, 46, 5, 0.05);
+  --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.05);
+  
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 2rem;
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: var(--surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-normal) forwards;
+}
